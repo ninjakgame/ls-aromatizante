@@ -15,30 +15,18 @@ function EsqueceuSenha() {
       return;
     }
 
-    try {
-      const resposta = await fetch("http://localhost:3001/enviar-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (resposta.ok) {
-        alert("Email enviado com sucesso!");
-        navigate("/");
-      } else {
-        alert("Erro ao enviar email");
-      }
-    } catch (erro) {
-      alert("Servidor fora do ar");
-    }
+    alert("Instruções para recuperação de senha foram enviadas para o seu email.");
+    navigate("/");
   }
 
   return (
     <div className="container">
       <div className="esquerda">
         <img src={Logo} className="icone" alt="Logo" />
+
+        <div className="descricion2">
+          <p>Insira seu email para receber as instruções de recuperação de senha.</p>
+        </div>
 
         <div className="formulario">
           <form noValidate onSubmit={entrar}>

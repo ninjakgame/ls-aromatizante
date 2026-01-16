@@ -33,7 +33,7 @@ flex-direction: column;
 margin: 2% 0;
 padding: 20px;
 align-items: center;
-gap: 4%;
+gap: 1px;
 }
 
 .top {
@@ -55,7 +55,7 @@ object-fit: cover;
 .formulario {
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 8px;
 width: 100%;
 padding: 100px;
 font-size: 20px;
@@ -181,8 +181,32 @@ text-align: center;
 color: rgb(255, 255, 255);
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 input.error, select.error {
 border: 2px solid red !important;
 background-color: #ffe6e6;
 transition: 0.3s;
+}
+
+.registro{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(156, 222, 156);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 24px;
+}
+
+.registro:hover{
+    background-color: rgb(71, 167, 71);
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+span{
+    color: rgb(219, 113, 37);
 }

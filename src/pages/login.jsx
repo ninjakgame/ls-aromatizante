@@ -6,6 +6,7 @@ import { useState } from "react";
 import '../css/login.css';
 
 function Login(){
+
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
@@ -61,16 +62,18 @@ function Login(){
                             <label htmlFor="lembrar">Lembrar-me</label>
                         </div>
                         <div className='esqueciSenha'>
-                            <Link to="/esqueceuSenha">Esqueci a Senha</Link>
+                            <Link to="/esqueci-senha">Esqueci a Senha</Link>
                         </div>
                     </div>
 
                     <button type="submit" className='logar'>Entrar</button>
+                    <button className="registro" type="button" onClick={(e) => { e.preventDefault(); navigate("/registrar"); }}> Registrar-se </button>
+
                     </form>
 
                     <hr></hr>
 
-                    <p className='contaNova'>Criar uma Conta</p>
+                    <p className='contaNova'>OU</p>
 
                     <div className='iconesSocial'>
                         <a href="https://www.google.com/" target="_blank" className="custom-button" rel="noopener noreferrer" aria-label="Google">
@@ -83,7 +86,7 @@ function Login(){
             <div className="direta">
                 <img src={banner1} className="banner" alt="" />
 
-                <h3>Seja Bem vindo ao nossa loja LS Aromatizante</h3>
+                <h3>Seja Bem vindo a nossa loja <span>LS Aromatizante</span></h3>
             </div>
         </div>
     )

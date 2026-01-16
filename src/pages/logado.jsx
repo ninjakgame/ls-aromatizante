@@ -1,3 +1,7 @@
 export default function Logado() {
-  return <h1>Login</h1>;
+  return(
+    <div className="header">
+      oi
+    </div>
+  )
 }
