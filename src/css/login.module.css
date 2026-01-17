@@ -4,13 +4,6 @@ padding: 0;
 box-sizing: border-box;
 }
 
-html, body {
-width: 100%;
-height: 100%;
-overflow: hidden;
-font-family: Arial, Helvetica, sans-serif;
-}
-
 .esqueciSenha a{
     text-decoration: none;
     color: black;
@@ -24,6 +17,7 @@ font-family: Arial, Helvetica, sans-serif;
 width: 100vw;
 height: 100vh;
 display: flex;
+overflow: hidden;
 }
 
 .esquerda {
@@ -149,7 +143,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* Botão Google */
-.custom-button {
+.custombutton {
 background-color: #ffffff;
 color: #000000;
 font-family: Georgia, system-ui, sans-serif;
@@ -165,7 +159,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 text-decoration: none;
 }
 
-.custom-button:hover {
+.custombutton:hover {
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 transform: scale(1.05);
 }

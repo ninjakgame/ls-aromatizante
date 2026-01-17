@@ -9,10 +9,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5%;
 }
 
 .logo2 {
     width: 100%;
     max-width: 250px;
     padding: 20px;
+}
+
+.formulario{
+    padding: 90px;
+}
+
+.senhas{
+    display: flex;
+    gap: 20px;
 }

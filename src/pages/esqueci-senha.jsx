@@ -1,6 +1,6 @@
 import Logo from "../img/logo_trial.png";
 import { useNavigate } from "react-router-dom";
-import "../css/esqueci-senha.css";
+import style from "../css/esqueciSenha.module.css";
 import { useState } from "react";
 
 function EsqueceuSenha() {
@@ -20,15 +20,15 @@ function EsqueceuSenha() {
   }
 
   return (
-    <div className="container">
-      <div className="esquerda">
-        <img src={Logo} className="icone" alt="Logo" />
+    <div className={style.container}>
+      <div className={style.esquerda}>
+        <img src={Logo} className={style.icone} alt="Logo" />
 
-        <div className="descricion2">
+        <div className={style.descricion2}>
           <p>Insira seu email para receber as instruções de recuperação de senha.</p>
         </div>
 
-        <div className="formulario">
+        <div className={style.formulario}>
           <form noValidate onSubmit={entrar}>
             <label htmlFor="email">Email</label>
 

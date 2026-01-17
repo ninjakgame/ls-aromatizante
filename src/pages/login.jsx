@@ -3,7 +3,7 @@ import banner1 from '../img/Banner01.png';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-import '../css/login.css';
+import style from '../css/login.module.css';
 
 function Login(){
 
@@ -27,14 +27,14 @@ function Login(){
   }
 
   alert("Login realizado com sucesso!");
-  navigate("/logado");
+  navigate("/paginaPrincipal");
 }
 
     return(
-        <div className="container">
-            <div className="esquerda">
-                <img src={logo} className="icone" alt="" />
-                <div className='formulario'>
+        <div className={style.container}>
+            <div className={style.esquerda}>
+                <img src={logo} className={style.icone} alt="" />
+                <div className={style.formulario}>
                     <form onSubmit={entrar}>
                     <label htmlFor="email">Email</label>
                     <input
@@ -52,39 +52,41 @@ function Login(){
                         onChange={(e) => setSenha(e.target.value)}
                     />
                 
-                    <div className='descricion'>
-                        <div className='lembrar'>
+                    <div className={style.descricion}>
+                        <div className={style.lembrar}>
                    <input
                         type="checkbox"
                         checked={lembrar}
                         onChange={(e) => setLembrar(e.target.checked)}
+                        id="lembrar"
+                        name='lembrar'
                     />
                             <label htmlFor="lembrar">Lembrar-me</label>
                         </div>
-                        <div className='esqueciSenha'>
+                        <div className={style.esqueciSenha}>
                             <Link to="/esqueci-senha">Esqueci a Senha</Link>
                         </div>
                     </div>
 
-                    <button type="submit" className='logar'>Entrar</button>
-                    <button className="registro" type="button" onClick={(e) => { e.preventDefault(); navigate("/registrar"); }}> Registrar-se </button>
+                    <button type="submit" className={style.logar}>Entrar</button>
+                    <button className={style.registro} type="button" onClick={(e) => { e.preventDefault(); navigate("/registrar"); }}> Registrar-se </button>
 
                     </form>
 
                     <hr></hr>
 
-                    <p className='contaNova'>OU</p>
+                    <p className={style.contaNova}>OU</p>
 
-                    <div className='iconesSocial'>
-                        <a href="https://www.google.com/" target="_blank" className="custom-button" rel="noopener noreferrer" aria-label="Google">
+                    <div className={style.iconesSocial}>
+                        <a href="https://www.google.com/" target="_blank" className={style.custombutton} rel="noopener noreferrer" aria-label="Google">
                         <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="" aria-hidden="true" style={{width: '20px', height: '20px'}} onerror="this.style.display='none'" />Google</a>
-                        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" className="custom-button" rel="noopener noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" className={style.custombutton} rel="noopener noreferrer" aria-label="Facebook">
                         <img src="https://cdn-icons-png.flaticon.com/128/1384/1384053.png" alt="" aria-hidden="true" style={{width: '20px', height: '20px'}} onerror="this.style.display='none'" />Facebook</a>
                     </div>
                 </div>
             </div>
             <div className="direta">
-                <img src={banner1} className="banner" alt="" />
+                <img src={banner1} className={style.banner} alt="" />
 
                 <h3>Seja Bem vindo a nossa loja <span>LS Aromatizante</span></h3>
             </div>

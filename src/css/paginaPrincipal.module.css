@@ -1,0 +1,92 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header da página */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(0, 161, 0);
+}
+
+/* Navegação */
+.navegador {
+  display: flex;
+  gap: 30px;
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+}
+
+/* Ícones */
+.icones img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+}
+
+.gifBanner {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 110%;
+  height: 900px;
+}
+
+.containerPromotion{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 40%;
+    left: 40%;
+    z-index: 1;
+    color: white;
+    gap: 80px;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.botoesRegistro{
+    background-color: #34C759;
+    border-radius: 50px;
+    width: 58%;
+    cursor: pointer;
+    transition: transform 0.8s, ease;
+}
+
+.botoesRegistro:hover{
+    background-color: rgb(12, 117, 12);
+    transform: scale(1.08);
+}
+
+.botoesVer{
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 50px;
+    width: 44%;
+    cursor: pointer;
+}
+
+.botoesVer:hover{
+    background-color: #34C759;
+    border: none;
+}
