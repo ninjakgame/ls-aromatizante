@@ -3,6 +3,7 @@ import IconePerfil from "../img/image 22.svg";
 import IconeCarinho from "../img/image 23.svg";
 import Banner from "../img/Design sem nomePix.gif";
 import style from "../css/paginaPrincipal.module.css";
+import IconeProduto1 from "../img/10Pix.jpg"
 
 function Logado() {
   
@@ -13,9 +14,9 @@ function Logado() {
         <img src={Logo} className={style.logo} alt="Logo Trial" />
 
         <nav className={style.navegador}>
-          <p>Página Principal</p>
-          <p>Sobre Nós</p>
-          <p>Produtos</p>
+          <button className="navegacao">Pagina Principal</button>
+          <button className="navegacao">Sobre Nois</button>
+          <button className="navegacao">Produtos</button>
         </nav>
 
         <div className={style.icones}>
@@ -34,12 +35,22 @@ function Logado() {
 
           <div className={style.containerPromotion}>
             <h2 className={style.promotion}>PROMOÇÃO</h2>
-            <p>Aromatizante de Casa Sabor: Lavanda</p>
+            <p>Aromatizante de Casa <br /> Sabor: Lavanda</p>
 
             <div className={style.botoes}>
               <button className={style.botoesRegistro}>Comprar Agora</button>
               <button className={style.botoesVer}>Ver Mais</button>
             </div>
+          </div>
+
+          <div className={style.produtos}>
+              <p>Destaque</p>
+
+              <div className={style.tiposProdutos}>
+                  <div className={style.imagemProduto}>
+                      <img src={IconeProduto1} className={style.ImagemProduct} alt="" />
+                  </div>
+              </div>
           </div>
         </div>
       </main>
