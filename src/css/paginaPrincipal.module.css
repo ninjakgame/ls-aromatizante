@@ -68,7 +68,10 @@
 .botoesRegistro{
     background-color: #34C759;
     border-radius: 50px;
-    width: 58%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: transform 0.8s, ease;
 }
@@ -82,11 +85,13 @@
     background-color: transparent;
     border: 1px solid gray;
     border-radius: 50px;
+    height: 80px;
     width: 44%;
     cursor: pointer;
+    transition: trasform 0.6 ease;
 }
 
 .botoesVer:hover{
-    background-color: #34C759;
-    border: none;
+    border: 1px solid rgb(12, 117, 12);
+    transform: scale(1.08);
 }

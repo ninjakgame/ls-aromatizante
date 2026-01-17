@@ -6,8 +6,8 @@ app.get('/usuarios', (req, res) => {
     { id: 1, nome: 'Ana' },
     { id: 2, nome: 'Pedro' }
   ])
+  res.send("Api FUncionando!")
 })
-
 
 app.listen(3000, () => {
   console.log('API rodando em http://localhost:3000')

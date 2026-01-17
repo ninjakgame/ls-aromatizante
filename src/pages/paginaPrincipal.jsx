@@ -5,6 +5,7 @@ import Banner from "../img/Design sem nomePix.gif";
 import style from "../css/paginaPrincipal.module.css";
 
 function Logado() {
+  
   return (
     <div className={style.container}>
 

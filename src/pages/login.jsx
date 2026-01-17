@@ -1,9 +1,10 @@
 import logo from '../img/logo_trial.png';
 import banner1 from '../img/Banner01.png';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useState } from "react";
 import style from '../css/login.module.css';
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 
 function Login(){
 
@@ -26,9 +27,31 @@ function Login(){
     return;
   }
 
-  alert("Login realizado com sucesso!");
-  navigate("/paginaPrincipal");
+  fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email,
+      senha
+    })
+  })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("Login inválido");
+      }
+      return res.json();
+    })
+    .then(data => {
+      alert(data.mensagem);
+      navigate("/paginaPrincipal");
+    })
+    .catch(err => {
+      alert("Email ou senha incorretos");
+    });
 }
+
 
     return(
         <div className={style.container}>
@@ -90,6 +113,8 @@ function Login(){
 
                 <h3>Seja Bem vindo a nossa loja <span>LS Aromatizante</span></h3>
             </div>
+
+            
         </div>
     )
 }
